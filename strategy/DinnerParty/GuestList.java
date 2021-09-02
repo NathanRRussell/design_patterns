@@ -6,18 +6,20 @@ public class GuestList extends SearchBehavior {
      * Creating variables
      */
     private String title;
-    ArrayList<String> people;
-    LinearSearch lSearch;
-    BinarySearch bSearch;
+    private ArrayList<String> people;
+    private LinearSearch searchBehavior;
     /**
      * Accessors
      * @param person
      */
      public GuestList(String person) {
+         this.title = title;
+         this.people = new ArrayList<>();
+         this.searchBehavior = new LinearSearch();
          
      }
      public String getTitle() {
-         return this.title;
+         return title;
      }
      public ArrayList<String> getList() {
          return this.people;
@@ -53,7 +55,7 @@ public class GuestList extends SearchBehavior {
       * @param bSearch
       */
      public void setSearchBehavior(BinarySearch bSearch){
-         lSearch = new LinearSearch();
+         searchBehavior = new LinearSearch();
      }
 
 
