@@ -13,6 +13,7 @@ public class GuestList extends SearchBehavior {
      * @param person
      */
      public GuestList(String person) {
+         this.title = title;
          this.people = new ArrayList<>();
          this.searchBehavior = new LinearSearch();
          
